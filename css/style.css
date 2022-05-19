@@ -1,0 +1,464 @@
+/* 공통 */
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    background-color: #fff;
+    box-sizing: border-box;
+    letter-spacing: -0.24px;
+}
+.wrapper{
+    max-width: 375px;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    background-color: #EEECE5;
+}
+/* main */
+main{
+    min-height: calc(100vh - 76px);
+}
+
+/* main > 유저 정보 */
+section.user-info{
+    height: 43px;
+    position: relative;
+    margin-top: 56px;
+}
+.user-info-avatar{
+    position: absolute;
+    top: 0;
+    left: 27px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user-info-title{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.user-info-title h1{
+    font-size: 18px;
+}
+.user-info-menu{
+    position: absolute;
+    top: 0;
+    right: 21px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.user-info-menu li{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.user-info-menu li:first-child{
+    margin-right: 18px;
+}
+.user-info-menu li img{
+    width: 100%;
+}
+/* main > 계좌 정보 */
+.account{
+    margin: 33px 0 24px;
+}
+.account-card{
+    background-color: #fff;
+    width: 74.4%;
+    min-width: 279px;
+    margin: 0 auto;
+    padding: 14px 19px 6px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.account-info{
+    font-size: 14px;
+    line-height: 1.42;
+    height: 21px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 16px;
+}
+.account-info .account-id{
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #858585;
+}
+.account-info .account-transfer{
+    color: #000;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.account-balance{
+    line-height: 1.47;
+    margin-bottom: 14px;
+}
+.account-balance span{
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+.account-useage{
+    width: 100%;
+}
+.account-limit{
+    display: flex;
+    height: 24px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.5px;
+}
+.account-range{
+    width: 93.9%;
+    min-width: 202px;
+    height: 6px;
+    background-color: #c4c4c4;
+    border-radius: 3px;
+    position: relative;
+    margin-left: 13px;
+}
+.account-range .account-percent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 128px;
+    height: 100%;
+    background-color: #FFDB4C;
+    border-radius: 3px;
+}
+.account-range .account-cursor{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 127px;
+    width: 4px;
+    height: 17px;
+    background-color: #FF5F00;
+    border-radius: 6px;
+    box-sizing: content-box;
+    border: 2px solid #fff;
+}
+.account-chart{
+    display: block;
+    width: 24px;
+}
+.account-chart img{
+    width: 100%;
+}
+.account-period{
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.42;
+    color: #858585;
+}
+/* main > 광고 */
+section.banner{
+    margin: 24px auto 21px ;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.42;
+}
+section.banner span{
+    vertical-align: top;
+    margin-right: 6px;
+}
+section.banner a{
+    vertical-align: top;
+    color: #000;
+}
+/* main > 컨텐츠 정보 */
+section.contents{
+    background: #F5F5F5;;
+    box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
+    border-radius: 30px 30px 0px 0px;
+    overflow: hidden;
+    position: absolute;
+    /* top: 43vh; */
+    top: 353px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    overflow: hidden;
+}
+.contents-dragbox{
+    height: 25px;
+    position: relative;
+    border-radius: 4px;
+}
+.contents-dragbox::after{
+    position: absolute;
+    top: 4.3px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    content: "";
+    width: 48px;
+    height: 2px;
+    background-color: #C4C4C4;
+}
+.contents-moneybox{
+    width: 84%;
+    overflow: hidden;
+}
+.contents-moneybox li{
+    max-width: 162px;
+    height: 47px;
+    background-color: #dadada;
+    margin-right: 13px;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+.contents-moneybox li.moneybox-button{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 6px;
+    cursor: pointer;
+}
+.contents-moneybox .button-icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+}
+.contents-moneybox .button-icon img{
+    width: 100%;
+}
+.contents-moneybox .button-icon+span{
+    font-size: 12px;
+    color: #FF5F00;
+}
+.moneybox-percent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.moneybox-range:last-child{
+    margin-right: 0;
+}
+.moneybox-percent.bg-orange{
+    background-color: #FF5F00;
+    width: 97px;
+}
+.moneybox-percent.bg-yellow{
+    background-color: #FEB700;
+    width: 121px;
+}
+.moneybox-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    padding: 5px 13px;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 1.48;
+    box-sizing: border-box;
+}
+.moneybox-info strong{
+    margin-bottom: 2px;
+}
+.contents-dailybox{
+    padding: 0 36px 0;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+.contents-dailybox::-webkit-scrollbar{
+    display: none;
+}
+.daily-history{
+    margin: 16px 0 22px;
+}
+.daily-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.42;
+    margin-bottom: 8px;
+}
+.daily-header strong{
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+}
+.daily-header p{
+    font-size: 14px;
+    font-weight: 700;
+    color: #B4B4B4;
+}
+.daily-lists li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1.85;
+    color: #444444;
+    font-weight: 400;
+    border-bottom: 1px solid #DCDCDC;
+    line-height: 42px;
+    box-sizing: border-box;
+}
+.daily-lists li p{
+    font-weight: 300;
+}
+.daily-lists li.income p{
+    color: #FF5F00;
+}
+
+/* 레이어창 */
+/* 이체 */
+.layer-transfer{
+    position: fixed;
+    top: 100vh;
+    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 375px;
+    height: 100vh;
+    z-index: 1;
+    background-color: #fff;
+    transition: all .4s;
+}
+.layer-heading{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 13px 33px;
+    box-sizing: border-box;
+}
+.layer-heading .closed-btn{
+    margin-top: 44px;
+    font-size: 13px;
+    color: #000;
+    line-height: 1.42;
+    font-weight: 300;
+    border: none;
+    background-color: transparent;
+    height: 100%;
+    letter-spacing: -0.24px;
+    cursor: pointer;
+}
+.layer-heading strong{
+    margin: 77px 0 0 16px;
+    font-size: 24px;
+    line-height: 1.47;
+    font-weight: 500;
+}
+.often-account .direct-btn{
+    display: block;
+    width: 84.5%;
+    max-width: 317px;
+    height: 47px;
+    line-height: 47px;
+    background-color: transparent;
+    border: 1px solid #858585;
+    border-radius: 4px;
+    margin: 0 auto 44px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.often-account .lists{
+    padding: 0 29px;
+}
+.often-account .lists li{
+    position: relative;
+    height: 54px;
+    margin-bottom: 17px;
+}
+.often-account .lists .avatar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+.often-account .lists .avatar img{
+    width: 100%;
+}
+.often-account .lists .account-short{
+    position: absolute;
+    top: 0;
+    left: 71px;
+}
+.often-account .lists .account-short span{
+    font-size: 18px;
+    line-height: 1.48;
+    font-weight: 300;
+    margin-bottom: 3px;
+    display: block;
+}
+.often-account .lists .account-short p{
+    font-size: 14px;
+    line-height: 1.48;
+    font-weight: 300;
+    color: #444444;
+}
+.often-account .lists .star{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    border: transparent;
+    background-color: transparent;
+    text-align: center;
+    line-height: 24px;
+    padding: 0;
+}
+.often-account .lists .star img{
+    width: 100%;
+}
+/* footer */
+footer{
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 375px;
+    height: 76px;
+    background: linear-gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);;
+}
+footer ul{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 48px;
+}
+footer ul li{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+footer ul li img{
+    width: 100%;
+}
